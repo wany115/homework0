@@ -25,7 +25,7 @@ x_2 = (-b - sqrt(b^2 - 4 * a * c)) / (2 * a)
 
 compare <- x_1 == x_2
 
-if (any(is.nan(x_1))||any(is.nan(x_2))) {
+if (is.nan(x_1)|is.nan(x_2)) {
   print("The equation has no real-number solution.")
 }else if (compare) {
   print (paste("The equation has only one solution,",x_1))
